@@ -4,7 +4,7 @@ pipeline{
   stages{
     stage("Build the Java Project"){
       steps{
-        echo message: "----------Building the webapp project------------"
+        echo message: "---------------Building the webapp project------------"
         sh script: "mvn -f pom.xml clean package"
       }
       post{
