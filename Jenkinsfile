@@ -9,7 +9,7 @@ pipeline{
       }
       post{
         success{
-          echo message: "----------Archiving the artifact------------"
+          echo message: "-------------------Archiving the artifact------------"
           archiveArtifacts artifacts: "**/*.war"
         }
       }
@@ -17,7 +17,7 @@ pipeline{
 
     stage("Deploy to staging"){
       steps{
-        echo message: "---------Deploy to staging ENVIRONMENT-----------"
+        echo message: "-----------------Deploy to staging ENVIRONMENT-----------"
         build job: "webapp_Maven_Stage"
       }
     }
