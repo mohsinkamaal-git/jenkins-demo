@@ -17,14 +17,14 @@ pipeline{
 
     stage("Deploy to staging"){
       steps{
-        echo message: "---------Deploy to staging ENV-----------"
+        echo message: "---------Deploy to staging ENVIRONMENT-----------"
         build job: "webapp_Maven_Stage"
       }
     }
 
     stage("Deploy to prod"){
       steps{
-        echo message: "---------Deploy to prod ENV-----------"
+        echo message: "------------Deploy to prod ENVIRONMENT--------------"
         timeout(time:5, unit:'DAYS'){
           input message: "Approve the deployment to Prod?"
         }
